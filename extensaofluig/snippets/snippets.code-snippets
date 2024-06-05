@@ -56,9 +56,9 @@
         "description": "Faz o looping FOR pegando o número index do elemento da tabela."
     },
 
-    "Ocultar Campo enableFields": {
+    "Desabilitar Campo enableFields": {
         "scope": "javascript,typescript",
-        "prefix": "ocultarCampoEnableFields()",
+        "prefix": "desabilitarCampoEnableFields()",
         "body": [
             "form.setEnabled('ID_CAMPO', false);",
             ""
