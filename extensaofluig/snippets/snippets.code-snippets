@@ -1,0 +1,200 @@
+{
+
+    "Nome Completo": {
+        "scope": "javascript,typescript",
+        "prefix": "nomeCompleto()",
+        "body": [
+            "var nomeCompleto = fluigAPI.getUserService().getCurrent().getFullName();",
+            ""
+        ],
+        "description": "Pegar o nome completo do usuário logado."
+    },
+
+    "Matricula": {
+        "scope": "javascript,typescript",
+        "prefix": "matricula()",
+        "body": [
+            "var matricula = fluigAPI.getUserService().getCurrent().getCode();",
+            ""
+        ],
+        "description": "Pegar o matricula do usuário logado."
+    },
+
+    "Número Processo": {
+        "scope": "javascript,typescript",
+        "prefix": "numeroProcesso()",
+        "body": [
+            "var processo = getValue('WKNumProces');",
+            ""
+        ],
+        "description": "Pegar o número do processo atual."
+    },
+
+    "Atividade Atual": {
+        "scope": "javascript,typescript",
+        "prefix": "numeroAtividadeAtual()",
+        "body": [
+            "var atividade = getValue('WKNumState');",
+            ""
+        ],
+        "description": "Pegar o número da atividade atual."
+    },
+
+    "For Index Table": {
+        "scope": "javascript,typescript",
+        "prefix": "forIndexTable()",
+        "body": [
+            "var indicePaiFilhoItens = form.getChildrenIndexes('NOME_TABELA');",
+            "",
+            "for (var i = 0; i < indicePaiFilhoItens.length; i++) {",
+            "",
+            "var indice = indicePaiFilhoItens[i];",
+            "",
+            "}",
+            ""
+        ],
+        "description": "Faz o looping FOR pegando o número index do elemento da tabela."
+    },
+
+    "Ocultar Campo enableFields": {
+        "scope": "javascript,typescript",
+        "prefix": "ocultarCampoEnableFields()",
+        "body": [
+            "form.setEnabled('ID_CAMPO', false);",
+            ""
+        ],
+        "description": "Oculta campos no enableFields"
+    },
+
+    "Ocultar div enableFields": {
+        "scope": "javascript,typescript",
+        "prefix": "ocultarDivEnableFields()",
+        "body": [
+            "form.setVisibleById('ID_CAMPO', false);",
+            ""
+        ],
+        "description": "Oculta div no enableFields"
+    },
+
+    "Adicionar Linha na Tabela": {
+        "scope": "javascript,typescript",
+        "prefix": "functionAdicionarLinha()",
+        "body": [
+            "function addFilho(){",
+            "",
+            "    wdkAddChild('NOME_TABELA');",
+            "",
+            "}",
+            ""
+        ],
+        "description": "Função de adicionar linha (Usar no onclick do Button HTML)"
+    },
+
+    "Remover Linha na Tabela": {
+        "scope": "javascript,typescript",
+        "prefix": "functionRemoverLinha()",
+        "body": [
+            "function deleteFilho(oElement){",
+            "    fnWdkRemoveChild(oElement)",
+            "}",
+            ""
+        ],
+        "description": "Função de remover linha (Usar no onclick do Button HTML)"
+    },
+
+    "Extrair index da tabela": {
+        "scope": "javascript,typescript",
+        "prefix": "functionIndexTable()",
+        "body": [
+            "function extrairIndex(oElement){",
+            "    const index = oElement.split('___');",
+            "    return index[1];",
+            "}",
+            ""
+        ],
+        "description": "Cria função para extrair o index de um elemento da Tabela"
+    },
+
+    "Selecionar Zoom": {
+        "scope": "javascript,typescript",
+        "prefix": "functionSelecionarZoom()",
+        "body": [
+            "function setSelectedZoomItem(selectedItem){",
+            "    if(selectedItem.inputId == 'ID_CAMPO_ZOOM'){",
+            "        //CODIGO AQUI",
+            "    }",
+            "}",
+            ""
+        ],
+        "description": "Cria função para capturar quando o campo Zoom é selecionado"
+    },
+
+    "Remover Zoom": {
+        "scope": "javascript,typescript",
+        "prefix": "functionRemoverZoom()",
+        "body": [
+            "function removedZoomItem(removedItem){",
+            "    if(removedItem.inputId == 'ID_CAMPO_ZOOM'){",
+            "        //CODIGO AQUI",
+            "    }",
+            "}",
+            ""
+        ],
+        "description": "Cria função para capturar quando o campo Zoom é removido"
+    },
+
+    "Campo Zoom": {
+        "scope": "avascript,typescript,html",
+        "prefix": "campoZoom()",
+        "body": [
+            "<input type='zoom' class='form-control' id='ID_ZOOM' name='NAME_ZOOM' data-zoom=\"{",
+            "   'datasetId':'NOME_DATASET',",
+            "   'displayKey':'COLUNA_FILTRO_DATASET',",
+            "   'maximumSelectionLength':'1',",
+            "   'placeholder':'PLACEHOLDER',",
+            "   'fields':[",
+            "       {",
+            "           'field':'NOME_COLUNA',",
+            "           'label':'RENOMEAR_COLUNA',",
+            "           'standard':'true'",
+            "       }",
+            "   ]",
+            "}\">",
+            ""
+        ],
+        "description": "Cria estrutura do campo Zoom HTML",
+    },
+
+    "Transferir Tarefa": {
+        "scope": "javascript,typescript",
+        "prefix": "transferirTarefa()",
+        "body": [
+            "var thread = hAPI.getActualThread(NUMERO_EMPRESA, NUMERO_PROCESSO, NUMERO_ATIVIDADE);",
+            "transferTask(USUÁRIO_ARRAY, OBSERVAÇÃO_STRING, thread)",
+            ""
+        ],
+        "description": "Transfere uma tarefa de um usuário para outro(s) usuário(s)."
+    },
+
+    "Substituir Usuário": {
+        "scope": "javascript,typescript",
+        "prefix": "substituirUsuario()",
+        "body": [
+            "setColleagueReplacement(ID_USUARIO)",
+            ""
+        ],
+        "description": "Seta um usuário substituto"
+    },
+
+    "Adicionar comentario na tarefa": {
+        "scope": "javascript,typescript",
+        "prefix": "adicionarComentarioTarefa()",
+        "body": [
+            "var thread = hAPI.getActualThread(NUMERO_EMPRESA, NUMERO_PROCESSO, NUMERO_ATIVIDADE);",
+            "setTaskComments('ID_USUARIO', NUMERO_PROCESSO, thread, 'OBSERVAÇÃO')",
+            ""
+        ],
+        "description": "Define uma observação para uma determinada tarefa do processo"
+    },
+
+}
