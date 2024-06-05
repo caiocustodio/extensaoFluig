@@ -2,6 +2,8 @@
 
 ![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue)
 ![License](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caio-lucas-7864a0186/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/caiocustodio)
 
 ## Descrição
 
@@ -25,7 +27,7 @@ Esta extensão é um projeto pessoal cujo objetivo é facilitar o desenvolviment
 | numeroProcesso()               | Pegar o número do processo atual.                               |
 | numeroAtividadeAtual()         | Pegar o número da atividade atual.                              |
 | forIndexTable()                | Faz o looping FOR pegando o número index do elemento da tabela. |
-| ocultarCampoEnableFields()     | Oculta campos no enableFields.                                  |
+| desabilitarCampoEnableFields() | Desabilitar campos no enableFields.                             |
 | ocultarDivEnableFields()       | Oculta div no enableFields.                                     |
 | functionAdicionarLinha()       | Função de adicionar linha (Usar no onclick do Button HTML).     |
 | functionRemoverLinha()         | Função de remover linha (Usar no onclick do Button HTML).       |
